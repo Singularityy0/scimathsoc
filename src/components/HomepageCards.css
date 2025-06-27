@@ -1,0 +1,79 @@
+.homepage-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  justify-items: center;
+}
+
+.homepage-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 24px rgba(80, 80, 120, 0.12);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: #02093d; /* or any dark tone matching your theme */
+  color: #eee;          /* ensure text is readable */
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+}
+
+
+.homepage-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(80, 80, 120, 0.18);
+}
+
+.homepage-card-icon {
+  margin-bottom: 1.2rem;
+}
+
+.homepage-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+
+.homepage-card-desc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.homepage-card-btn {
+  margin-top: auto;
+  background: linear-gradient(90deg, #4f8cff 0%, #61dafb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80, 80, 120, 0.10);
+  transition: background 0.18s, transform 0.18s;
+}
+
+.homepage-card-btn:hover {
+  background: linear-gradient(90deg, #61dafb 0%, #4f8cff 100%);
+  transform: scale(1.06);
+}
+
+@media (max-width: 700px) {
+  .homepage-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .homepage-card {
+    max-width: 98vw;
+    min-height: 260px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+} 
