@@ -15,7 +15,11 @@ const Team = () => {
     "https://i.pinimg.com/originals/48/a2/69/48a2696280a0d19488e41ab600b71367.gif",
     "https://i.pinimg.com/originals/2b/df/4a/2bdf4a199d29c6a140edbf3500b63f75.gif",
     "https://i.pinimg.com/originals/de/a7/03/dea7038c9e5435898c1b0cb70fa5121e.gif",
-    "https://i.pinimg.com/originals/8e/d4/fa/8ed4faa438469c93efd1ceaaf06304ac.gif"
+    "https://i.pinimg.com/originals/8e/d4/fa/8ed4faa438469c93efd1ceaaf06304ac.gif",
+    "https://i.pinimg.com/originals/0b/d6/26/0bd626c2398b14907af2840b66ec79a1.gif",
+    "https://i.pinimg.com/originals/b7/1c/bb/b71cbbad9b5e81194b4a12c0921a827b.gif",
+    "https://i.pinimg.com/originals/d7/1c/fe/d71cfe0dcd1644770c4d8c2f621e4972.gif",
+    "https://i.pinimg.com/736x/81/b1/07/81b107fa37dd6ac53e2f71b6316f4b5d.jpg"
   ];
 
   useEffect(() => {

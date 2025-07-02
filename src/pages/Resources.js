@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Download, FileText, BookOpen, HelpCircle } from 'lucide-react';
+import { Download, FileText, BookOpen, HelpCircle, Loader2 } from 'lucide-react';
 import './Resources.css';
 
 const Resources = () => {
+  const [downloadingFiles, setDownloadingFiles] = useState(new Set());
   const resourceCategories = [
     {
       id: 'lectures',
@@ -41,30 +42,53 @@ const Resources = () => {
       description: 'Practice problems and question sets for competitive exams',
       resources: [
         {
-          name: 'Blue Victoria 50 Combinatorics Problems',
+          name: 'Blue Victoria 50 Combinatorics Problems Set',
           type: 'PDF',
           size: '767 KB',
-          file: '/resources/Blue_Victoria_50_Combinatorics_Problems.pdf'
+          file: '/resources/Blue_Victoria_50_Combinatorics_problems_set (final).pdf'
         }
       ]
     }
   ];
 
-  const handleDownload = (resource) => {
+  const handleDownload = async (resource) => {
     if (resource.file === '#') {
       // Placeholder function for items not yet available
-      console.log('Download placeholder:', resource.name);
+      alert('This resource is not yet available for download.');
       return;
     }
     
-    // Create download link for actual files
-    const link = document.createElement('a');
-    link.href = resource.file;
-    link.download = resource.name;
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Add file to downloading state
+    setDownloadingFiles(prev => new Set([...prev, resource.name]));
+    
+    try {
+      // Check if the file exists by attempting to fetch it
+      const response = await fetch(resource.file, { method: 'HEAD' });
+      
+      if (!response.ok) {
+        throw new Error('File not found');
+      }
+      
+      // Create download link for actual files
+      const link = document.createElement('a');
+      link.href = resource.file;
+      link.download = resource.name;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert(`Failed to download ${resource.name}. Please try again later.`);
+    } finally {
+      // Remove file from downloading state
+      setDownloadingFiles(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(resource.name);
+        return newSet;
+      });
+    }
   };
 
   return (
@@ -130,9 +154,13 @@ const Resources = () => {
                       className="resource-download"
                       onClick={() => handleDownload(resource)}
                       title={`Download ${resource.name}`}
-                      disabled={resource.file === '#'}
+                      disabled={resource.file === '#' || downloadingFiles.has(resource.name)}
                     >
-                      <Download size={20} />
+                      {downloadingFiles.has(resource.name) ? (
+                        <Loader2 size={20} className="animate-spin" />
+                      ) : (
+                        <Download size={20} />
+                      )}
                     </button>
                   </motion.div>
                 ))}

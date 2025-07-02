@@ -331,6 +331,26 @@
   background: #333333;
 }
 
+/* Animation for loading spinner */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled state for downloading buttons */
+.resource-download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Placeholder styling for resource items */
 .resource-item.placeholder-item {
   opacity: 0.6;
