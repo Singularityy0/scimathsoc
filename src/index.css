@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.light-mode {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.light-mode body {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .section-title {
+  color: #000000;
+}
+
+.dark-mode .section-title {
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  transition: color 0.3s ease;
+}
+
+.light-mode .section-subtitle {
+  color: #666666;
+}
+
+.dark-mode .section-subtitle {
+  color: #cccccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid;
+  background: transparent;
+}
+
+.light-mode .btn {
+  border-color: #000000;
+  color: #000000;
+}
+
+.light-mode .btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.dark-mode .btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.btn-primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.light-mode .btn-primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.light-mode .btn-primary:hover {
+  background: #333333;
+  border-color: #333333;
+}
+
+.dark-mode .btn-primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .btn-primary:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+  transition: outline-color 0.3s ease;
+}
+
+.light-mode *:focus {
+  outline-color: #000000;
+}
+
+.dark-mode *:focus {
+  outline-color: #ffffff;
+} 

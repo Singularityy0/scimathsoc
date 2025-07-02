@@ -1,0 +1,309 @@
+.events-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-title {
+  color: #000000;
+}
+
+.dark-mode .page-title {
+  color: #ffffff;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-subtitle {
+  color: #666666;
+}
+
+.dark-mode .page-subtitle {
+  color: #cccccc;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.light-mode .event-card {
+  border-color: #e5e5e5;
+  background: #ffffff;
+}
+
+.dark-mode .event-card {
+  border-color: #333333;
+  background: #1a1a1a;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.light-mode .event-card:hover {
+  border-color: #000000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .event-card:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.event-card.past {
+  opacity: 0.7;
+}
+
+.event-date {
+  text-align: center;
+  min-width: 80px;
+}
+
+.event-date .day {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.light-mode .event-date .day {
+  color: #000000;
+}
+
+.dark-mode .event-date .day {
+  color: #ffffff;
+}
+
+.event-date .month {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.event-date .year {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.light-mode .event-date .month {
+  color: #666666;
+}
+
+.light-mode .event-date .year {
+  color: #666666;
+}
+
+.dark-mode .event-date .month {
+  color: #cccccc;
+}
+
+.dark-mode .event-date .year {
+  color: #cccccc;
+}
+
+.event-content {
+  flex: 1;
+}
+
+.event-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .event-content h3 {
+  color: #000000;
+}
+
+.dark-mode .event-content h3 {
+  color: #ffffff;
+}
+
+.event-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .event-description {
+  color: #666666;
+}
+
+.dark-mode .event-description {
+  color: #cccccc;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-time,
+.event-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .event-time,
+.light-mode .event-location {
+  color: #666666;
+}
+
+.dark-mode .event-time,
+.dark-mode .event-location {
+  color: #cccccc;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.status-badge.upcoming {
+  transition: all 0.3s ease;
+}
+
+.light-mode .status-badge.upcoming {
+  background: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .status-badge.upcoming {
+  background: #ffffff;
+  color: #000000;
+}
+
+.status-badge.completed {
+  transition: all 0.3s ease;
+}
+
+.light-mode .status-badge.completed {
+  background: #f8f8f8;
+  color: #666666;
+  border: 1px solid #e5e5e5;
+}
+
+.dark-mode .status-badge.completed {
+  background: #333333;
+  color: #cccccc;
+  border: 1px solid #555555;
+}
+
+.event-category {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Category-specific colors */
+.event-category.workshop {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.event-category.seminar {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.event-category.competition {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.event-category.research {
+  background: #10b981;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-page {
+    padding-top: 100px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .event-date {
+    margin-bottom: 1rem;
+  }
+  
+  .event-meta {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .event-card {
+    padding: 1.5rem;
+  }
+  
+  .event-date .day {
+    font-size: 1.5rem;
+  }
+}

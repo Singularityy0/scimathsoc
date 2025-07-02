@@ -1,0 +1,361 @@
+.about-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-title {
+  color: #000000;
+}
+
+.dark-mode .page-title {
+  color: #ffffff;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-subtitle {
+  color: #666666;
+}
+
+.dark-mode .page-subtitle {
+  color: #cccccc;
+}
+
+.about-content {
+  margin-bottom: 5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: sticky;
+  top: 120px;
+}
+
+.iit-logo {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.light-mode .iit-logo {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.dark-mode .iit-logo {
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.1));
+}
+
+.iit-logo:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-text h2 {
+  color: #000000;
+}
+
+.dark-mode .about-text h2 {
+  color: #ffffff;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-text p {
+  color: #666666;
+}
+
+.dark-mode .about-text p {
+  color: #cccccc;
+}
+
+.about-text ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.about-text ul li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-text ul li {
+  color: #666666;
+}
+
+.dark-mode .about-text ul li {
+  color: #cccccc;
+}
+
+.about-text ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-text ul li::before {
+  color: #000000;
+}
+
+.dark-mode .about-text ul li::before {
+  color: #ffffff;
+}
+
+.about-visual {
+  position: sticky;
+  top: 120px;
+}
+
+.placeholder-box {
+  border: 2px dashed;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.light-mode .placeholder-box {
+  background: #f8f8f8;
+  border-color: #e5e5e5;
+  color: #999999;
+}
+
+.dark-mode .placeholder-box {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #666666;
+}
+
+.team-section {
+  border-top: 1px solid;
+  padding-top: 4rem;
+  transition: border-color 0.3s ease;
+}
+
+.light-mode .team-section {
+  border-top-color: #e5e5e5;
+}
+
+.dark-mode .team-section {
+  border-top-color: #333333;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.light-mode .team-section h2 {
+  color: #000000;
+}
+
+.dark-mode .team-section h2 {
+  color: #ffffff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.light-mode .team-member {
+  border-color: #e5e5e5;
+}
+
+.dark-mode .team-member {
+  border-color: #333333;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.light-mode .team-member:hover {
+  border-color: #000000;
+}
+
+.dark-mode .team-member:hover {
+  border-color: #ffffff;
+}
+
+.member-avatar {
+  margin-bottom: 1.5rem;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.light-mode .avatar-placeholder {
+  background: #f8f8f8;
+  border-color: #e5e5e5;
+  color: #999999;
+}
+
+.dark-mode .avatar-placeholder {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #666666;
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .team-member h3 {
+  color: #000000;
+}
+
+.dark-mode .team-member h3 {
+  color: #ffffff;
+}
+
+.member-role {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .member-role {
+  color: #666666;
+}
+
+.dark-mode .member-role {
+  color: #cccccc;
+}
+
+.member-description {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .member-description {
+  color: #666666;
+}
+
+.dark-mode .member-description {
+  color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 100px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-logo {
+    position: static;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+  
+  .iit-logo {
+    max-width: 200px;
+  }
+  
+  .about-visual {
+    position: static;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .iit-logo {
+    max-width: 150px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .team-section h2 {
+    font-size: 2rem;
+  }
+} 

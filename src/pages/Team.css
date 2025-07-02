@@ -1,0 +1,326 @@
+.team-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-title {
+  color: #000000;
+}
+
+.dark-mode .page-title {
+  color: #ffffff;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.light-mode .page-subtitle {
+  color: #666666;
+}
+
+.dark-mode .page-subtitle {
+  color: #cccccc;
+}
+
+.team-content {
+  margin-bottom: 4rem;
+}
+
+.team-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+  transition: border-color 0.3s ease;
+}
+
+.light-mode .section-header {
+  border-bottom-color: #e5e5e5;
+}
+
+.dark-mode .section-header {
+  border-bottom-color: #333333;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.light-mode .section-header h2 {
+  color: #000000;
+}
+
+.dark-mode .section-header h2 {
+  color: #ffffff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.light-mode .team-member {
+  border-color: #e5e5e5;
+  background: #ffffff;
+}
+
+.dark-mode .team-member {
+  border-color: #333333;
+  background: #1a1a1a;
+}
+
+/* Special styling for leader cards in dark mode */
+.dark-mode .team-section:first-child .team-member {
+  background-image: url('https://i.pinimg.com/originals/5d/f2/d6/5df2d61cf5706abeef73abb25ed2d1ed.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .team-section:first-child .team-member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.dark-mode .team-section:first-child .team-member > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Special styling for secretary cards in dark mode */
+.dark-mode .team-section:last-child .team-member {
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+} 
+
+.dark-mode .team-section:last-child .team-member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+
+.dark-mode .team-section:last-child .team-member > * {
+  position: relative;
+  z-index: 2;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.light-mode .team-member:hover {
+  border-color: #000000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .team-member:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.member-photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.light-mode .photo-placeholder {
+  background: #f8f8f8;
+  color: #999999;
+}
+
+.dark-mode .photo-placeholder {
+  background: #2a2a2a;
+  color: #666666;
+}
+
+.member-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .member-info h3 {
+  color: #000000;
+}
+
+.dark-mode .member-info h3 {
+  color: #ffffff;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .member-role {
+  color: #666666;
+}
+
+.dark-mode .member-role {
+  color: #cccccc;
+}
+
+.email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.light-mode .email-btn {
+  border-color: #e5e5e5;
+  color: #666666;
+}
+
+.dark-mode .email-btn {
+  border-color: #333333;
+  color: #cccccc;
+}
+
+.email-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.light-mode .email-btn:hover {
+  border-color: #000000;
+  color: #000000;
+  background: #f8f8f8;
+}
+
+.dark-mode .email-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: #333333;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .loading {
+  color: #666666;
+}
+
+.dark-mode .loading {
+  color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-page {
+    padding-top: 100px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .team-member {
+    padding: 1.5rem;
+  }
+  
+  .member-photo {
+    width: 80px;
+    height: 80px;
+  }
+}
