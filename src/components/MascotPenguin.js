@@ -15,8 +15,6 @@ const MascotPenguin = () => {
   const [showTip, setShowTip] = useState(false);
   const [tip, setTip] = useState(tips[0]);
   const [visible, setVisible] = useState(false);
-  const [walkingIn, setWalkingIn] = useState(false);
-  const [walkingOut, setWalkingOut] = useState(false);
   const [xPos, setXPos] = useState(-100); 
   const { isDarkMode } = useContext(ThemeContext) || { isDarkMode: false };
 
@@ -27,33 +25,27 @@ const MascotPenguin = () => {
     const sequence = async () => {
       if (!isMounted) return;
       setVisible(true);
-      setWalkingIn(true);
       setXPos(-100);
       await new Promise(res => setTimeout(res, 200));
       setXPos(24);
       await new Promise(res => setTimeout(res, 1200));
-      setWalkingIn(false);
       setWave(true);
       setShowTip(true);
       setTip('Hello and welcome!');
       await new Promise(res => setTimeout(res, 2000));
       setWave(false);
       setShowTip(false);
-      setWalkingOut(true);
       setXPos(-100);
       await new Promise(res => setTimeout(res, 1200));
-      setWalkingOut(false);
       setVisible(false);
       await new Promise(res => setTimeout(res, 2000));
       // Loop tips
       while (isMounted) {
         setVisible(true);
-        setWalkingIn(true);
         setXPos(-100);
         await new Promise(res => setTimeout(res, 200));
         setXPos(24);
         await new Promise(res => setTimeout(res, 1200));
-        setWalkingIn(false);
         setWave(true);
         setShowTip(true);
         let isRare = false;
@@ -67,10 +59,8 @@ const MascotPenguin = () => {
         await new Promise(res => setTimeout(res, isRare ? 8000 : 4000));
         setWave(false);
         setShowTip(false);
-        setWalkingOut(true);
         setXPos(-100);
         await new Promise(res => setTimeout(res, 1200));
-        setWalkingOut(false);
         setVisible(false);
         await new Promise(res => setTimeout(res, 8000));
       }
