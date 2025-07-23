@@ -36,9 +36,28 @@ const About = () => {
               
               <h2>Our Vision</h2>
               <p>
-                To establish a leading platform where scientific and mathematical curiosity thrives through deep exploration, structured learning, and impactful initiatives—positioning IIT Kanpur at the forefront of academic excellence and innovation among IITs.
+                To establish a leading platform where scientific and mathematical curiosity thrives through deep exploration, structured learning, and impactful initiatives—positioning IIT Kanpur at the forefront of academic excellence and innovation among IITs
+                <a
+                  href="/history"
+                  style={{
+                    color: isDarkMode ? '#888' : '#bbb',
+                    fontSize: '1.2em',
+                    textDecoration: 'none',
+                    opacity: 0.35,
+                    marginLeft: '2px',
+                    cursor: 'pointer',
+                    verticalAlign: 'super',
+                  }}
+                  title="Some secrets are best discovered by the curious."
+                  aria-label="hidden history page"
+                >
+                  .
+                </a>
               </p>
               
+              <div style={{ fontSize: '0.95em', color: isDarkMode ? '#888' : '#bbb', margin: '18px 0 0 0', fontStyle: 'italic', opacity: 0.7 }}>
+                Some secrets are best discovered by the curious.
+              </div>
               <h2>What We Do</h2>
               <ul>
                 <li>Conduct deep-dive academic discussions that go beyond surface-level exploration</li>

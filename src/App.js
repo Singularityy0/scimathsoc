@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
+
 import Projects from './pages/Projects';
 import Events from './pages/Events';
 import Resources from './pages/Resources';
+import History from './pages/History';
 import Footer from './components/Footer';
 
 export const ThemeContext = createContext();
@@ -31,6 +33,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/events" element={<Events />} />
               <Route path="/resources" element={<Resources />} />
+              <Route path="/history" element={<History />} />
             </Routes>
           </main>
           <Footer />
