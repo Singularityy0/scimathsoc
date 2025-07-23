@@ -11,7 +11,7 @@ import Resources from './pages/Resources';
 import History from './pages/History';
 
 import Footer from './components/Footer';
-import MascotPenguin from './components/MascotPenguin';
+
 
 export const ThemeContext = createContext();
 
@@ -39,7 +39,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          <MascotPenguin />
         </div>
       </Router>
     </ThemeContext.Provider>
