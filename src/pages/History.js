@@ -24,8 +24,7 @@ const History = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2>How It All Began</h2>
-          <p>
-            
+          <p> 
             Although the inception The Science and Mathematics Society was this year only, there was a community dedicated for the same cause as we stand today 
           </p>
           <h2>Science Coffee House</h2>
