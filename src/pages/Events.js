@@ -32,7 +32,7 @@ const Events = () => {
               <span className="year">2025</span>
             </div>
             <div className="event-content">
-              <h3>Upcoming</h3>
+              <h3>Completed</h3>
               <p className="event-description">
                 SciMathSoc’s Intro Session at IIT Kanpur welcomes new students, showcasing the society’s activities, workshops, and competitions to spark interest in science and mathematics.
               </p>
@@ -45,6 +45,36 @@ const Events = () => {
                 <span className="event-location">
                   <MapPin size={16} />
                   L7, Lecture Hall Complex, IIT Kanpur
+                </span>
+              </div>
+              <div className="event-status">
+                <span className="status-badge completed">Completed</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="event-card">
+            <div className="event-date">
+              <span className="day">17</span>
+              <span className="month">Aug</span>
+              <span className="year">2025</span>
+            </div>
+            <div className="event-content">
+              <h3>Upcoming</h3>
+              <p className="event-description">
+              The Chamber of Challenges is designed as a science and maths escape room, a race against time where teams must solve interconnected puzzles, unlock hidden clues, and outwit the hourglass before it seals shut.
+
+              </p>
+              <div className="event-meta">
+                <span className="event-category competition">Escape Room</span>
+                <span className="event-time">
+                  <Clock size={16} />
+                  15:00 onwards
+                </span>
+                <span className="event-location">
+                  <MapPin size={16} />
+                  MPR
                 </span>
               </div>
               <div className="event-status">

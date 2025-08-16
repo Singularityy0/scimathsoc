@@ -266,6 +266,11 @@
   color: #ffffff;
 }
 
+.event-category.Intro {
+  background: #ff0000;
+  color: #ffffff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .events-page {
