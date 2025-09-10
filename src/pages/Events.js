@@ -85,7 +85,7 @@ const Events = () => {
 
 
 
-          <div className="event-card kyu-padhe-bhai-card">
+          <div className="event-card">
             <div className="event-date">
               <span className="day">10</span>
               <span className="month">Sept</span>

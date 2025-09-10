@@ -271,30 +271,6 @@
   color: #ffffff;
 }
 
-.kyu-padhe-bhai-card {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/kpbaks1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff !important;
-  border: none !important;
-}
-
-.kyu-padhe-bhai-card .event-date .day,
-.kyu-padhe-bhai-card .event-date .month,
-.kyu-padhe-bhai-card .event-date .year,
-.kyu-padhe-bhai-card .event-content h3,
-.kyu-padhe-bhai-card .event-description,
-.kyu-padhe-bhai-card .event-time,
-.kyu-padhe-bhai-card .event-location {
-  color: #ffffff !important;
-}
-
-.kyu-padhe-bhai-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .events-page {
