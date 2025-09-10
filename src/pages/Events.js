@@ -100,7 +100,7 @@ const Events = () => {
                 Join us for a relaxed, interactive session where you can ask questions you couldn't in class and see how mathematical rigor transforms "obvious" concepts into powerful tools. Come explore the stories behind the subject and maybe find a new perspective on math!
               </p>
               <div className="event-meta">
-                <span className="event-category competition">Kyu Padhe Bhai?</span>
+                <span className="event-category seminar">Kyu Padhe Bhai?</span>
                 <span className="event-time">
                   <Clock size={16} />
                   19:35 onwards
