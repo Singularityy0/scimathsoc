@@ -30,13 +30,12 @@ const Projects = () => {
                 src="/projectsimg/nt.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
-                style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover', objectPosition: 'center center' }}
               />
             </div>
             <div className="project-content">
-              <h3>Upcoming</h3>
+              <h3>Number Theory & applications</h3>
               <p className="project-description">
-                Number Theory Camp: An intensive week long camp between core number theory and its applications in competitive programming and modern computing and cryptography.
+                An intensive camp between core number theory and its applications in competitive programming and modern computing and cryptography.
               </p>
               <div className="project-meta">
                 <span className="project-status upcoming ">Upcoming...</span>
