@@ -44,6 +44,16 @@ const Projects = () => {
                 <p><strong>Team:</strong> N/A</p>
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
+              <div className="project-actions">
+                <a
+                  className="project-apply-btn"
+                  href="https://forms.gle/cqiZWMv4viyvk6MK9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply here
+                </a>
+              </div>
             </div>
           </div>
 
