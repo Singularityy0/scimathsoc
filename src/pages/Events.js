@@ -111,7 +111,7 @@ const Events = () => {
                 </span>
               </div>
               <div className="event-status">
-                <span className="status-badge upcoming">Upcoming</span>
+                <span className="status-badge completed">Completed</span>
               </div>
             </div>
           </div>

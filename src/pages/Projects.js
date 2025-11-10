@@ -27,7 +27,7 @@ const Projects = () => {
           <div className="project-card">
             <div className="project-image">
               <img 
-                src="/projectsimg/IMG20240727151310.jpg" 
+                src="/projectsimg/nt.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
                 style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover', objectPosition: 'center center' }}
@@ -36,14 +36,14 @@ const Projects = () => {
             <div className="project-content">
               <h3>Upcoming</h3>
               <p className="project-description">
-                coming Soon.
+                Number Theory Camp: An intensive week long camp between core number theory and its applications in competitive programming and modern computing and cryptography.
               </p>
               <div className="project-meta">
                 <span className="project-status upcoming ">Upcoming...</span>
               </div>
               <div className="project-team">
-                <p><strong>Team:</strong> N members</p>
-                <p><strong>Duration:</strong> M  months</p>
+                <p><strong>Team:</strong> N/A</p>
+                <p><strong>Duration:</strong> 1 week</p>
               </div>
             </div>
           </div>
