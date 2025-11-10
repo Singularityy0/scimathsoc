@@ -69,7 +69,7 @@ const Projects = () => {
           <div className="project-card">
             <div className="project-image">
               <img 
-                src="/projectsimg/nt.jpg" 
+                src="/projectsimg/cc.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
               />
@@ -114,7 +114,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           <div className="project-card">
             <div className="project-image">
               <img 
-                src="/projectsimg/nt.jpg" 
+                src="/projectsimg/rt.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
               />
@@ -160,7 +160,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           <div className="project-card">
             <div className="project-image">
               <img 
-                src="/projectsimg/nt.jpg" 
+                src="/projectsimg/mml.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
               />
@@ -206,7 +206,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           <div className="project-card">
             <div className="project-image">
               <img 
-                src="/projectsimg/nt.jpg" 
+                src="/projectsimg/qc.jpg" 
                 alt="Project visual" 
                 className="project-img-tag"
               />
