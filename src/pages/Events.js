@@ -92,7 +92,7 @@ const Events = () => {
               <span className="year">2025</span>
             </div>
             <div className="event-content">
-              <h3>Upcoming</h3>
+              <h3>Completed</h3>
               <p className="event-description">
                 <strong>Session 1: Calculus: from messy origins to rigor</strong><br/>
                 <em>Prof. Amit Kuber (Math Dept., IITK)</em><br/><br/>
