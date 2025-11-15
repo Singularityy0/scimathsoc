@@ -38,7 +38,7 @@ const Projects = () => {
                 An intensive camp between core number theory and its applications in competitive programming and modern computing and cryptography.
               </p>
               <div className="project-meta">
-                <span className="project-status upcoming ">Upcoming...</span>
+                <span className="project-status upcoming ">Ongoing...</span>
               </div>
               <div className="project-team">
                 <p><strong>Team:</strong> N/A</p>
@@ -74,7 +74,7 @@ const Projects = () => {
 complexity — covering Turing machines, complexity classes, reductions, and completeness.
               </p>
               <div className="project-meta">
-                <span className="project-status upcoming ">Upcoming...</span>
+                <span className="project-status upcoming ">Ongoing...</span>
               </div>
               <div className="project-team">
                 <p><strong>Team:</strong> N/A</p>
@@ -111,7 +111,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 The goal of this camp is to introduce students to the fundamentals of the Theory of Relativity — covering key concepts and implications.
               </p>
               <div className="project-meta">
-                <span className="project-status upcoming ">Upcoming...</span>
+                <span className="project-status upcoming ">Ongoing...</span>
               </div>
               <div className="project-team">
                 <p><strong>Team:</strong> N/A</p>
@@ -152,7 +152,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 algebra, calculus, and probability.
               </p>
               <div className="project-meta">
-                <span className="project-status upcoming ">Upcoming...</span>
+                <span className="project-status upcoming ">Ongoing...</span>
               </div>
               <div className="project-team">
                 <p><strong>Team:</strong> N/A</p>
@@ -190,7 +190,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 covering key concepts such as qubits, superposition, entanglement, and quantum gates.
               </p>
               <div className="project-meta">
-                <span className="project-status upcoming ">Upcoming...</span>
+                <span className="project-status upcoming ">Ongoing...</span>
               </div>
               <div className="project-team">
                 <p><strong>Team:</strong> N/A</p>
