@@ -45,14 +45,7 @@ const Projects = () => {
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
               <div className="project-actions">
-                <a
-                  className="project-apply-btn"
-                  href="https://forms.gle/cqiZWMv4viyvk6MK9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply here
-                </a>
+                <span className="project-closed-badge">Applications over</span>
               </div>
             </div>
           </div>
@@ -88,14 +81,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
               <div className="project-actions">
-                <a
-                  className="project-apply-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfbuSad4DpQHkpC5qdIKtoTJecatBW8-lmsU4ElYq80NMy0Xg/viewform?usp=dialog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply here
-                </a>
+                <span className="project-closed-badge">Applications over</span>
               </div>
             </div>
           </div>
@@ -132,14 +118,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
               <div className="project-actions">
-                <a
-                  className="project-apply-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeeoJCY08ie5AmbSb2bejUNRQaY95Uw7yPyjYCSexnDRWv4og/viewform?usp=publish-editor"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply here
-                </a>
+                <span className="project-closed-badge">Applications over</span>
               </div>
             </div>
           </div>
@@ -180,14 +159,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
               <div className="project-actions">
-                <a
-                  className="project-apply-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSe7DnCsqO7gQxm0-z1lKcUEes7KC-grXJAIsbSDpm2PppGmmg/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply here
-                </a>
+                <span className="project-closed-badge">Applications over</span>
               </div>
             </div>
           </div>
@@ -225,14 +197,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
                 <p><strong>Duration:</strong> 1 week</p>
               </div>
               <div className="project-actions">
-                <a
-                  className="project-apply-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeVcmbpGTJY_01tulnOroLFo3AWtfn7gZxc8PNaRPJyGHpaiw/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply here
-                </a>
+                <span className="project-closed-badge">Applications over</span>
               </div>
             </div>
           </div>

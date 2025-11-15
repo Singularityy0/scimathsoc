@@ -268,7 +268,6 @@
   position: relative;
 }
 
-.project-card.closed .project-description,
 .project-card.closed .project-content h3 {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
@@ -291,6 +290,18 @@
   font-weight: 700;
   letter-spacing: 1px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Closed badge (replaces the apply link) */
+.project-closed-badge {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
 }
 
 /* Responsive Design */
