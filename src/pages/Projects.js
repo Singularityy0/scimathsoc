@@ -24,7 +24,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="project-card">
+          <div className="project-card closed">
             <div className="project-image">
               <img 
                 src="/projectsimg/nt.jpg" 
@@ -66,7 +66,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="project-card">
+          <div className="project-card closed">
             <div className="project-image">
               <img 
                 src="/projectsimg/cc.jpg" 
@@ -111,7 +111,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="project-card">
+          <div className="project-card closed">
             <div className="project-image">
               <img 
                 src="/projectsimg/rt.jpg" 
@@ -157,7 +157,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="project-card">
+          <div className="project-card closed">
             <div className="project-image">
               <img 
                 src="/projectsimg/mml.jpg" 
@@ -203,7 +203,7 @@ complexity — covering Turing machines, complexity classes, reductions, and com
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="project-card">
+          <div className="project-card closed">
             <div className="project-image">
               <img 
                 src="/projectsimg/qc.jpg" 

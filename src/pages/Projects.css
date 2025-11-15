@@ -257,6 +257,42 @@
   box-shadow: 0 6px 16px rgba(255,255,255,0.08);
 }
 
+/* Closed project visual treatment */
+.project-card.closed {
+  filter: grayscale(60%);
+  opacity: 0.9;
+  position: relative;
+}
+
+.project-card.closed .project-content {
+  position: relative;
+}
+
+.project-card.closed .project-description,
+.project-card.closed .project-content h3 {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(220,38,38,0.85);
+}
+
+.project-card.closed .project-img-tag {
+  filter: brightness(0.8) contrast(0.95) grayscale(50%);
+}
+
+.project-card.closed::after {
+  content: "APPLICATIONS OVER";
+  position: absolute;
+  top: 12px;
+  right: -36px;
+  background: #ef4444;
+  color: #fff;
+  transform: rotate(30deg);
+  padding: 6px 56px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-page {
