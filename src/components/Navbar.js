@@ -28,47 +28,61 @@ const Navbar = () => {
         </Link>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={`navbar-link ${isActive('/') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             Home
           </Link>
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className={`navbar-link ${isActive('/about') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             About
           </Link>
-          <Link 
-            to="/team" 
+          <Link
+            to="/team"
             className={`navbar-link ${isActive('/team') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             Team
           </Link>
-          <Link 
-            to="/projects" 
+          <Link
+            to="/projects"
             className={`navbar-link ${isActive('/projects') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             Projects
           </Link>
-          <Link 
-            to="/events" 
+          <Link
+            to="/events"
             className={`navbar-link ${isActive('/events') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             Events
           </Link>
-          <Link 
-            to="/resources" 
+          <Link
+            to="/resources"
             className={`navbar-link ${isActive('/resources') ? 'active' : ''}`}
             onClick={closeMenu}
           >
             Resources
+          </Link>
+          <Link
+            to="/testimonials"
+            className={`navbar-link ${isActive('/testimonials') ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Testimonials
+          </Link>
+          <Link
+            to="/gallery"
+            className={`navbar-link ${isActive('/gallery') ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Gallery
           </Link>
           <ThemeToggle />
         </div>
