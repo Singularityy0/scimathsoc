@@ -14,14 +14,14 @@ current_team:
       photo: "/team/Leader_Shrey_Solanki.jpg"
       email: "shreyjs23@iitk.ac.in"
       role: "Leader"
-    - name: "Soumyadittya Chandra"
-      photo: "/team/Leader_Soumyadittya_Chandra.jpeg"
-      email: "soumyaadic23@iitk.ac.in"
+    - name: "Devansh Bhardwaj"
+      photo: "/team/Leader_Devansh_Bharadwaj.jpeg"
+      email: "devansh23@iitk.ac.in"
       role: "Leader"
   
   secretaries:
     - name: "Aarya Bhatt"
-      photo: "/team/placeholder-secretary.jpg"
+      photo: "/team/Secy_Aarya_Bhatt.jpeg"
       email: "aaryajb24@iitk.ac.in"
       role: "Secretary"
     - name: "Aashvi Agarwal"

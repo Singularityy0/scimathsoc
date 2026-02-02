@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -8,6 +8,8 @@ import Team from './pages/Team';
 import Projects from './pages/Projects';
 import Events from './pages/Events';
 import Resources from './pages/Resources';
+import Testimonials from './pages/Testimonials';
+import PhotoGallery from './pages/PhotoGallery';
 import History from './pages/History';
 
 import Footer from './components/Footer';
@@ -16,7 +18,14 @@ import Footer from './components/Footer';
 export const ThemeContext = createContext();
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('isDarkMode');
+    return savedMode === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('isDarkMode', isDarkMode);
+  }, [isDarkMode]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -35,6 +44,8 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/events" element={<Events />} />
               <Route path="/resources" element={<Resources />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/gallery" element={<PhotoGallery />} />
               <Route path="/history" element={<History />} />
             </Routes>
           </main>

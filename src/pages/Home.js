@@ -8,13 +8,14 @@ import './Home.css';
 
 const Home = () => {
   const { isDarkMode } = useContext(ThemeContext);
-  
+
   return (
     <div className="home">
       <section className="hero">
+
         <div className="container">
           <div className="hero-layout">
-            <motion.div 
+            <motion.div
               className="hero-content"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -39,16 +40,16 @@ const Home = () => {
                 </Link>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="hero-logo"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <img 
+              <img
                 src={isDarkMode ? "/iitk-logo.png" : "/IIT-Kanpur.png"}
-                alt="IIT Kanpur Logo" 
+                alt="IIT Kanpur Logo"
                 className="iit-logo"
               />
             </motion.div>
@@ -68,9 +69,9 @@ const Home = () => {
               We conduct deep-dive sessions, problem-solving meets, and research-driven initiatives to cultivate rigorous thinking and meaningful academic output in science and mathematics.
             </p>
           </div>
-          
+
           <div className="features-grid">
-            <motion.div 
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,8 +81,8 @@ const Home = () => {
               <h3>Research Projects</h3>
               <p>Collaborative research initiatives in mathematics and science.</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,8 +92,8 @@ const Home = () => {
               <h3>Workshops</h3>
               <p>Hands-on workshops and skill development sessions.</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
