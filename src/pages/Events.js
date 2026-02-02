@@ -146,6 +146,36 @@ const Events = () => {
 
           <div className="event-card">
             <div className="event-date">
+              <span className="day">3</span>
+              <span className="month">Nov</span>
+              <span className="year">2025</span>
+            </div>
+            <div className="event-content">
+              <h3>Completed</h3>
+              <p className="event-description">
+                Ever wondered why quantum computing exists, what it really is, or how it actually works? Join us for an interactive discussion session on "Introduction to Quantum Computing" where we'll explore the why, what, and how of this fascinating field!<br /><br />
+                This isn't your typical lecture -- it's a casual, meme-filled discussion! So come with your thoughts, doubts, and most importantly, an open mind. Oh, and here's a little bonus -- you'll get a sneak peek (and preference!) into something SciMathSoc is planning for the winter, brownie points for guesses!<br /><br />
+                Let's entangle our minds and untangle some qubits together!
+              </p>
+              <div className="event-meta">
+                <span className="event-category seminar">Introduction to Quantum Computing</span>
+                <span className="event-time">
+                  <Clock size={16} />
+                  7:00 PM
+                </span>
+                <span className="event-location">
+                  <MapPin size={16} />
+                  L17
+                </span>
+              </div>
+              <div className="event-status">
+                <span className="status-badge completed">Completed</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="event-card">
+            <div className="event-date">
               <span className="day">--</span>
               <span className="month">--</span>
               <span className="year">2025</span>
