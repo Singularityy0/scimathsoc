@@ -181,7 +181,7 @@ const Testimonials = () => {
                         <GlitchText delay={500}>Testimonials</GlitchText>
                     </h1>
                     <p className="testimonials-subtitle">
-                        Hear from our members, alumni, and participants about their experiences with SciMathSoc.
+                        Hear from the main protagonists who ultimately led to glory in the Stem-Vibe PS at 14th Inter-IIT Tech Meet
                     </p>
                 </div>
 

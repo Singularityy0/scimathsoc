@@ -8,6 +8,18 @@ import './PhotoGallery.css';
 
 const albums = [
     {
+        id: 'inter-iit-14',
+        title: "Inter IIT Tech Meet 14.0",
+        cover: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.13 PM.jpeg",
+        images: [
+            { id: 1, src: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.13 PM.jpeg", caption: "Inter IIT Tech Meet 14.0" },
+            //{ id: 2, src: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.13 PM (1).jpeg", caption: "Inter IIT Tech Meet 14.0" },
+            { id: 3, src: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.13 PM (2).jpeg", caption: "Inter IIT Tech Meet 14.0" },
+            { id: 4, src: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.53 PM.jpeg", caption: "Post Medal Celebrations with the bootcamp attendees" },
+            //{ id: 5, src: "/Inter IIT techmeet 14.0/WhatsApp Image 2026-02-02 at 9.42.53 PM (1).jpeg", caption: "Inter IIT Tech Meet 14.0" },
+        ]
+    },
+    {
         id: 'intro-session',
         title: "Intro Session",
         cover: "/Intro Session/IMG-20260129-WA0009.jpg",
@@ -164,7 +176,7 @@ const PhotoGallery = () => {
                     )}
                 </AnimatePresence>
 
-                
+
                 <AnimatePresence>
                     {selectedImage && (
                         <motion.div
@@ -184,7 +196,7 @@ const PhotoGallery = () => {
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.8, opacity: 0 }}
-                                onClick={(e) => e.stopPropagation()} 
+                                onClick={(e) => e.stopPropagation()}
                             />
                             {selectedImage.caption && (
                                 <p className="fullscreen-caption">{selectedImage.caption}</p>
