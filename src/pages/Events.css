@@ -271,6 +271,189 @@
   color: #ffffff;
 }
 
+/* AUCTI-VER expanded card */
+.auctiver-card {
+  grid-column: 1 / -1;
+}
+
+.auctiver-details {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auctiver-details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .auctiver-details h4 {
+  color: #000000;
+}
+
+.dark-mode .auctiver-details h4 {
+  color: #ffffff;
+}
+
+.auctiver-sponsor p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.light-mode .auctiver-sponsor p {
+  color: #666666;
+}
+
+.dark-mode .auctiver-sponsor p {
+  color: #cccccc;
+}
+
+.schedule-items {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid;
+  border-radius: 8px;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.light-mode .schedule-item {
+  border-color: #e5e5e5;
+  background: #f8f8f8;
+}
+
+.dark-mode .schedule-item {
+  border-color: #333333;
+  background: #111111;
+}
+
+.schedule-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .schedule-label {
+  color: #999999;
+}
+
+.dark-mode .schedule-label {
+  color: #888888;
+}
+
+.schedule-date {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.light-mode .schedule-date {
+  color: #000000;
+}
+
+.dark-mode .schedule-date {
+  color: #ffffff;
+}
+
+.auctiver-format p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .auctiver-format p {
+  color: #666666;
+}
+
+.dark-mode .auctiver-format p {
+  color: #cccccc;
+}
+
+.auctiver-prizes .prize-pool {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .auctiver-prizes .prize-pool {
+  color: #000000;
+}
+
+.dark-mode .auctiver-prizes .prize-pool {
+  color: #ffffff;
+}
+
+.auctiver-prizes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auctiver-prizes li {
+  font-size: 0.95rem;
+  padding-left: 1.2rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.auctiver-prizes li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.light-mode .auctiver-prizes li {
+  color: #666666;
+}
+
+.dark-mode .auctiver-prizes li {
+  color: #cccccc;
+}
+
+.auctiver-register-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auctiver-note {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.light-mode .auctiver-note {
+  color: #999999;
+}
+
+.dark-mode .auctiver-note {
+  color: #888888;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .events-page {
@@ -296,6 +479,19 @@
   
   .event-meta {
     align-items: center;
+  }
+
+  .auctiver-card {
+    grid-column: 1 / -1;
+  }
+
+  .schedule-items {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .schedule-item {
+    min-width: auto;
   }
 }
 

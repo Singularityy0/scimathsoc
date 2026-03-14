@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, MapPin } from 'lucide-react';
+import { Clock, MapPin, ExternalLink } from 'lucide-react';
 import './Events.css';
 
 const Events = () => {
@@ -174,26 +174,88 @@ const Events = () => {
             </div>
           </div>
 
-          <div className="event-card">
+          <div className="event-card auctiver-card">
             <div className="event-date">
-              <span className="day">--</span>
-              <span className="month">--</span>
-              <span className="year">2025</span>
+              <span className="day">28</span>
+              <span className="month">Mar</span>
+              <span className="year">2026</span>
             </div>
             <div className="event-content">
-              <h3>Upcoming</h3>
+              <h3>AUCTI-VER</h3>
               <p className="event-description">
-                Details for the Auctiver event coming soon.
+                What happens when mathematics meets markets? What happens when strategy is just as important as solving the problem?
               </p>
+              <p className="event-description">
+                A two-day mathematical auction challenge that combines problem-solving, strategic bidding, and decision-making under real market conditions.
+              </p>
+
+              <div className="auctiver-details">
+                <div className="auctiver-sponsor">
+                  <p>
+                    Powered by <strong>Optiver</strong> — a leading global market-making firm that provides liquidity across financial markets worldwide. Founded in 1986, Optiver operates at the intersection of mathematics, technology, and trading, using quantitative models and high-performance systems to improve price discovery and market efficiency across exchanges.
+                  </p>
+                </div>
+
+                <div className="auctiver-schedule">
+                  <h4>Schedule</h4>
+                  <div className="schedule-items">
+                    <div className="schedule-item">
+                      <span className="schedule-label">Qualifiers</span>
+                      <span className="schedule-date">28 March 2026</span>
+                    </div>
+                    <div className="schedule-item">
+                      <span className="schedule-label">Finals</span>
+                      <span className="schedule-date">29 March 2026</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="auctiver-format">
+                  <h4>Format</h4>
+                  <p>
+                    AUCTI-VER is a <strong>team event</strong> — participants compete in <strong>teams of three</strong>. The competition tests mathematical ability, strategy, resource allocation, and speed of execution through a unique auction-based format across multiple rounds.
+                  </p>
+                  <p>
+                    Open to students from all batches. For <strong>Y25 students</strong>, participation is subject to limited seats — a <strong>separate screening test</strong> will be conducted on <strong>17–18 March 2026</strong> prior to the qualifiers.
+                  </p>
+                  <p>
+                    The <strong>10 best Y25 volunteers</strong> who help with seamless calculations for the ongoing Pi-Day event will be <strong>directly selected</strong> for the qualifiers, irrespective of the screening test.
+                  </p>
+                </div>
+
+                <div className="auctiver-prizes">
+                  <h4>Prizes &amp; Goodies</h4>
+                  <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
+                  <ul>
+                    <li>Finalists receive <strong>Optiver goodie bags</strong></li>
+                    <li><strong>Top 5 performers</strong> receive <strong>headphones worth ₹20K+</strong></li>
+                    <li>Winners' resumes and results forwarded to <strong>Optiver</strong></li>
+                  </ul>
+                </div>
+
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBa8d4tVbstSAkqO2Dz4vDTQHkfYjhbcH0W6jdZ77TbVv08Q/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary auctiver-register-btn"
+                >
+                  Register Now
+                  <ExternalLink size={18} />
+                </a>
+                <p className="auctiver-note">
+                  <em>Note:</em> Team registration details will be shared shortly.
+                </p>
+              </div>
+
               <div className="event-meta">
-                <span className="event-category competition">Auctiver</span>
+                <span className="event-category competition">AUCTI-VER × Optiver</span>
                 <span className="event-time">
                   <Clock size={16} />
-                  TBA
+                  28–29 March 2026
                 </span>
                 <span className="event-location">
                   <MapPin size={16} />
-                  TBA
+                  IIT Kanpur
                 </span>
               </div>
               <div className="event-status">
