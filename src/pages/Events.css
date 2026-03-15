@@ -44,6 +44,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  align-items: start;
 }
 
 .event-card {
@@ -271,10 +272,6 @@
   color: #ffffff;
 }
 
-/* AUCTI-VER expanded card */
-.auctiver-card {
-  grid-column: 1 / -1;
-}
 
 .auctiver-details {
   margin: 1.5rem 0;
@@ -454,7 +451,7 @@
   color: #888888;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .events-page {
     padding-top: 100px;

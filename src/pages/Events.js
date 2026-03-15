@@ -183,16 +183,13 @@ const Events = () => {
             <div className="event-content">
               <h3>AUCTI-VER</h3>
               <p className="event-description">
-                What happens when mathematics meets markets? What happens when strategy is just as important as solving the problem?
-              </p>
-              <p className="event-description">
-                A two-day mathematical auction challenge that combines problem-solving, strategic bidding, and decision-making under real market conditions.
+                A two-day math auction where teams of three solve problems, bid strategically, and make real-time decisions under market-like conditions. Think fast, bid smart, win big.
               </p>
 
               <div className="auctiver-details">
                 <div className="auctiver-sponsor">
                   <p>
-                    Powered by <strong>Optiver</strong> — a leading global market-making firm that provides liquidity across financial markets worldwide. Founded in 1986, Optiver operates at the intersection of mathematics, technology, and trading, using quantitative models and high-performance systems to improve price discovery and market efficiency across exchanges.
+                    Powered by <strong>Optiver</strong> which is  a global market-making firm at the intersection of math, tech, and trading.
                   </p>
                 </div>
 
@@ -213,23 +210,23 @@ const Events = () => {
                 <div className="auctiver-format">
                   <h4>Format</h4>
                   <p>
-                    AUCTI-VER is a <strong>team event</strong> — participants compete in <strong>teams of three</strong>. The competition tests mathematical ability, strategy, resource allocation, and speed of execution through a unique auction-based format across multiple rounds.
+                    <strong>Teams of 3</strong> compete across multiple auction rounds testing math, strategy, and speed.
                   </p>
                   <p>
-                    Open to students from all batches. For <strong>Y25 students</strong>, participation is subject to limited seats — a <strong>separate screening test</strong> will be conducted on <strong>17–18 March 2026</strong> prior to the qualifiers.
+                    Open to all batches.There are limited seats for <strong>Y25 students</strong>; screening test will be conducted on <strong>17–18 March</strong>.
                   </p>
                   <p>
-                    The <strong>10 best Y25 volunteers</strong> who help with seamless calculations for the ongoing Pi-Day event will be <strong>directly selected</strong> for the qualifiers, irrespective of the screening test.
+                    Top <strong>10 Y25 volunteers</strong> from Pi-Day get a <strong>direct qualifier spot</strong>.
                   </p>
                 </div>
 
                 <div className="auctiver-prizes">
-                  <h4>Prizes &amp; Goodies</h4>
+                  <h4>Prizes & Goodies</h4>
                   <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
                   <ul>
-                    <li>Finalists receive <strong>Optiver goodie bags</strong></li>
-                    <li><strong>Top 5 performers</strong> receive <strong>headphones worth ₹20K+</strong></li>
-                    <li>Winners' resumes and results forwarded to <strong>Optiver</strong></li>
+                    <li>Finalists get <strong>Optiver goodie bags</strong></li>
+                    <li><strong>Top 5</strong> get <strong>headphones worth ₹20K+</strong></li>
+                    <li>Winners' profiles forwarded to <strong>Optiver</strong></li>
                   </ul>
                 </div>
 
