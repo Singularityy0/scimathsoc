@@ -3,7 +3,171 @@ import { motion } from 'framer-motion';
 import { Clock, MapPin, ExternalLink } from 'lucide-react';
 import './Events.css';
 
+const events = [
+  {
+    id: 'auctiver-2026',
+    date: '2026-03-28',
+    day: '28',
+    month: 'Mar',
+    year: '2026',
+    title: 'AUCTI-VER',
+    description: 'A two-day math auction where teams of three solve problems, bid strategically, and make real-time decisions under market-like conditions. Think fast, bid smart, win big.',
+    category: 'AUCTI-VER × Optiver',
+    categoryClass: 'competition',
+    time: '28–29 March 2026',
+    location: 'IIT Kanpur',
+    status: 'upcoming',
+    cardClass: 'auctiver-card',
+    details: (
+      <div className="auctiver-details">
+        <div className="auctiver-sponsor">
+          <p>
+            Powered by <strong>Optiver</strong> which is  a global market-making firm at the intersection of math, tech, and trading.
+          </p>
+        </div>
+
+        <div className="auctiver-schedule">
+          <h4>Schedule</h4>
+          <div className="schedule-items">
+            <div className="schedule-item">
+              <span className="schedule-label">Qualifiers</span>
+              <span className="schedule-date">28 March 2026</span>
+            </div>
+            <div className="schedule-item">
+              <span className="schedule-label">Finals</span>
+              <span className="schedule-date">29 March 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="auctiver-format">
+          <h4>Format</h4>
+          <p>
+            <strong>Teams of 3</strong> compete across multiple auction rounds testing math, strategy, and speed.
+          </p>
+          <p>
+            Open to all batches.There are limited seats for <strong>Y25 students</strong>; screening test will be conducted on <strong>17–18 March</strong>.
+          </p>
+          <p>
+            Top <strong>10 Y25 volunteers</strong> from Pi-Day get a <strong>direct qualifier spot</strong>.
+          </p>
+        </div>
+
+        <div className="auctiver-prizes">
+          <h4>Prizes & Goodies</h4>
+          <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
+          <ul>
+            <li>Finalists get <strong>Optiver goodie bags</strong></li>
+            <li><strong>Top 5</strong> get <strong>headphones worth ₹20K+</strong></li>
+            <li>Winners' profiles forwarded to <strong>Optiver</strong></li>
+          </ul>
+        </div>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeBa8d4tVbstSAkqO2Dz4vDTQHkfYjhbcH0W6jdZ77TbVv08Q/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary auctiver-register-btn"
+        >
+          Register Now
+          <ExternalLink size={18} />
+        </a>
+        <p className="auctiver-note">
+          <em>Note:</em> Team registration details will be shared shortly.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 'qc-2025-11-03',
+    date: '2025-11-03',
+    day: '3',
+    month: 'Nov',
+    year: '2025',
+    title: 'Completed',
+    description: (
+      <>
+        Ever wondered why quantum computing exists, what it really is, or how it actually works? Join us for an interactive discussion session on "Introduction to Quantum Computing" where we'll explore the why, what, and how of this fascinating field!<br /><br />
+        This isn't your typical lecture -- it's a casual, meme-filled discussion! So come with your thoughts, doubts, and most importantly, an open mind. Oh, and here's a little bonus -- you'll get a sneak peek (and preference!) into something SciMathSoc is planning for the winter, brownie points for guesses!<br /><br />
+        Let's entangle our minds and untangle some qubits together!
+      </>
+    ),
+    category: 'Introduction to Quantum Computing',
+    categoryClass: 'seminar',
+    time: '7:00 PM',
+    location: 'L17',
+    status: 'completed',
+  },
+  {
+    id: 'kpb-2025-09-10',
+    date: '2025-09-10',
+    day: '10',
+    month: 'Sept',
+    year: '2025',
+    title: 'Completed',
+    description: (
+      <>
+        <strong>Session 1: Calculus: from messy origins to rigor</strong><br />
+        <em>Prof. Amit Kuber (Math Dept., IITK)</em><br /><br />
+        Discover the fascinating journey from calculus's messy beginnings to mathematical rigor. We'll explore how early puzzling problems led to calculus's invention and why epsilon-delta "pedantry" is actually the foundation of mathematical precision.<br /><br />
+        Join us for a relaxed, interactive session where you can ask questions you couldn't in class and see how mathematical rigor transforms "obvious" concepts into powerful tools. Come explore the stories behind the subject and maybe find a new perspective on math!
+      </>
+    ),
+    category: 'Kyu Padhe Bhai?',
+    categoryClass: 'seminar',
+    time: '7:35 PM onwards',
+    location: 'L17',
+    status: 'completed',
+  },
+  {
+    id: 'crypto-2025-09-08',
+    date: '2025-09-08',
+    day: '8',
+    month: 'Sept',
+    year: '2025',
+    title: 'Completed',
+    description: 'Step into the shadows of secrecy where mathematics meets security. Unravel the complex number theory and algorithms that guard our digital lives. From classical ciphers to modern encryption, join us to decipher the elegant math protecting your every click.',
+    category: 'Math Behind Cryptography',
+    categoryClass: 'seminar',
+    time: '6:30 PM - 8:30 PM',
+    location: 'Lecture Hall 17',
+    status: 'completed',
+  },
+  {
+    id: 'escape-room-2025-08-17',
+    date: '2025-08-17',
+    day: '17',
+    month: 'Aug',
+    year: '2025',
+    title: 'Completed',
+    description: 'The Chamber of Challenges is designed as a science and maths escape room, a race against time where teams must solve interconnected puzzles, unlock hidden clues, and outwit the hourglass before it seals shut.',
+    category: 'Escape Room',
+    categoryClass: 'competition',
+    time: '3:00 PM onwards',
+    location: 'MPR',
+    status: 'completed',
+  },
+  {
+    id: 'intro-2025-08-05',
+    date: '2025-08-05',
+    day: '5',
+    month: 'Aug',
+    year: '2025',
+    title: 'Completed',
+    description: "SciMathSoc's Intro Session at IIT Kanpur welcomes new students, showcasing the society's activities, workshops, and competitions to spark interest in science and mathematics.",
+    category: 'Scimathsoc Intro session',
+    categoryClass: 'Intro',
+    time: '7:00 PM - 9:00 PM',
+    location: 'L7, Lecture Hall Complex, IIT Kanpur',
+    status: 'completed',
+  },
+];
+
 const Events = () => {
+  const sortedEvents = [...events].sort(
+    (eventA, eventB) => new Date(eventB.date) - new Date(eventA.date)
+  );
+
   return (
     <div className="events-page">
       <div className="container">
@@ -25,247 +189,43 @@ const Events = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="event-card">
-            <div className="event-date">
-              <span className="day">5</span>
-              <span className="month">Aug</span>
-              <span className="year">2025</span>
-            </div>
-            <div className="event-content">
-              <h3>Completed</h3>
-              <p className="event-description">
-                SciMathSoc’s Intro Session at IIT Kanpur welcomes new students, showcasing the society’s activities, workshops, and competitions to spark interest in science and mathematics.
-              </p>
-              <div className="event-meta">
-                <span className="event-category Intro">Scimathsoc Intro session</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  7:00 PM - 9:00 PM
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  L7, Lecture Hall Complex, IIT Kanpur
-                </span>
+          {sortedEvents.map((event) => (
+            <div
+              key={event.id}
+              className={`event-card${event.cardClass ? ` ${event.cardClass}` : ''}`}
+            >
+              <div className="event-date">
+                <span className="day">{event.day}</span>
+                <span className="month">{event.month}</span>
+                <span className="year">{event.year}</span>
               </div>
-              <div className="event-status">
-                <span className="status-badge completed">Completed</span>
-              </div>
-            </div>
-          </div>
+              <div className="event-content">
+                <h3>{event.title}</h3>
+                <p className="event-description">{event.description}</p>
 
+                {event.details}
 
-          <div className="event-card">
-            <div className="event-date">
-              <span className="day">17</span>
-              <span className="month">Aug</span>
-              <span className="year">2025</span>
-            </div>
-            <div className="event-content">
-              <h3>Completed</h3>
-              <p className="event-description">
-                The Chamber of Challenges is designed as a science and maths escape room, a race against time where teams must solve interconnected puzzles, unlock hidden clues, and outwit the hourglass before it seals shut.
-
-              </p>
-              <div className="event-meta">
-                <span className="event-category competition">Escape Room</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  3:00 PM onwards
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  MPR
-                </span>
-              </div>
-              <div className="event-status">
-                <span className="status-badge completed">Completed</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="event-card">
-            <div className="event-date">
-              <span className="day">8</span>
-              <span className="month">Sept</span>
-              <span className="year">2025</span>
-            </div>
-            <div className="event-content">
-              <h3>Completed</h3>
-              <p className="event-description">
-                Step into the shadows of secrecy where mathematics meets security. Unravel the complex number theory and algorithms that guard our digital lives. From classical ciphers to modern encryption, join us to decipher the elegant math protecting your every click.
-              </p>
-              <div className="event-meta">
-                <span className="event-category seminar">Math Behind Cryptography</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  6:30 PM - 8:30 PM
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  Lecture Hall 17
-                </span>
-              </div>
-              <div className="event-status">
-                <span className="status-badge completed">Completed</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="event-card">
-            <div className="event-date">
-              <span className="day">10</span>
-              <span className="month">Sept</span>
-              <span className="year">2025</span>
-            </div>
-            <div className="event-content">
-              <h3>Completed</h3>
-              <p className="event-description">
-                <strong>Session 1: Calculus: from messy origins to rigor</strong><br />
-                <em>Prof. Amit Kuber (Math Dept., IITK)</em><br /><br />
-                Discover the fascinating journey from calculus's messy beginnings to mathematical rigor. We'll explore how early puzzling problems led to calculus's invention and why epsilon-delta "pedantry" is actually the foundation of mathematical precision.<br /><br />
-                Join us for a relaxed, interactive session where you can ask questions you couldn't in class and see how mathematical rigor transforms "obvious" concepts into powerful tools. Come explore the stories behind the subject and maybe find a new perspective on math!
-              </p>
-              <div className="event-meta">
-                <span className="event-category seminar">Kyu Padhe Bhai?</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  7:35 PM onwards
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  L17
-                </span>
-              </div>
-              <div className="event-status">
-                <span className="status-badge completed">Completed</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="event-card">
-            <div className="event-date">
-              <span className="day">3</span>
-              <span className="month">Nov</span>
-              <span className="year">2025</span>
-            </div>
-            <div className="event-content">
-              <h3>Completed</h3>
-              <p className="event-description">
-                Ever wondered why quantum computing exists, what it really is, or how it actually works? Join us for an interactive discussion session on "Introduction to Quantum Computing" where we'll explore the why, what, and how of this fascinating field!<br /><br />
-                This isn't your typical lecture -- it's a casual, meme-filled discussion! So come with your thoughts, doubts, and most importantly, an open mind. Oh, and here's a little bonus -- you'll get a sneak peek (and preference!) into something SciMathSoc is planning for the winter, brownie points for guesses!<br /><br />
-                Let's entangle our minds and untangle some qubits together!
-              </p>
-              <div className="event-meta">
-                <span className="event-category seminar">Introduction to Quantum Computing</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  7:00 PM
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  L17
-                </span>
-              </div>
-              <div className="event-status">
-                <span className="status-badge completed">Completed</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="event-card auctiver-card">
-            <div className="event-date">
-              <span className="day">28</span>
-              <span className="month">Mar</span>
-              <span className="year">2026</span>
-            </div>
-            <div className="event-content">
-              <h3>AUCTI-VER</h3>
-              <p className="event-description">
-                A two-day math auction where teams of three solve problems, bid strategically, and make real-time decisions under market-like conditions. Think fast, bid smart, win big.
-              </p>
-
-              <div className="auctiver-details">
-                <div className="auctiver-sponsor">
-                  <p>
-                    Powered by <strong>Optiver</strong> which is  a global market-making firm at the intersection of math, tech, and trading.
-                  </p>
+                <div className="event-meta">
+                  <span className={`event-category ${event.categoryClass}`}>{event.category}</span>
+                  <span className="event-time">
+                    <Clock size={16} />
+                    {event.time}
+                  </span>
+                  <span className="event-location">
+                    <MapPin size={16} />
+                    {event.location}
+                  </span>
                 </div>
-
-                <div className="auctiver-schedule">
-                  <h4>Schedule</h4>
-                  <div className="schedule-items">
-                    <div className="schedule-item">
-                      <span className="schedule-label">Qualifiers</span>
-                      <span className="schedule-date">28 March 2026</span>
-                    </div>
-                    <div className="schedule-item">
-                      <span className="schedule-label">Finals</span>
-                      <span className="schedule-date">29 March 2026</span>
-                    </div>
-                  </div>
+                <div className="event-status">
+                  <span className={`status-badge ${event.status}`}>{event.status === 'upcoming' ? 'Upcoming' : 'Completed'}</span>
                 </div>
-
-                <div className="auctiver-format">
-                  <h4>Format</h4>
-                  <p>
-                    <strong>Teams of 3</strong> compete across multiple auction rounds testing math, strategy, and speed.
-                  </p>
-                  <p>
-                    Open to all batches.There are limited seats for <strong>Y25 students</strong>; screening test will be conducted on <strong>17–18 March</strong>.
-                  </p>
-                  <p>
-                    Top <strong>10 Y25 volunteers</strong> from Pi-Day get a <strong>direct qualifier spot</strong>.
-                  </p>
-                </div>
-
-                <div className="auctiver-prizes">
-                  <h4>Prizes & Goodies</h4>
-                  <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
-                  <ul>
-                    <li>Finalists get <strong>Optiver goodie bags</strong></li>
-                    <li><strong>Top 5</strong> get <strong>headphones worth ₹20K+</strong></li>
-                    <li>Winners' profiles forwarded to <strong>Optiver</strong></li>
-                  </ul>
-                </div>
-
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBa8d4tVbstSAkqO2Dz4vDTQHkfYjhbcH0W6jdZ77TbVv08Q/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary auctiver-register-btn"
-                >
-                  Register Now
-                  <ExternalLink size={18} />
-                </a>
-                <p className="auctiver-note">
-                  <em>Note:</em> Team registration details will be shared shortly.
-                </p>
-              </div>
-
-              <div className="event-meta">
-                <span className="event-category competition">AUCTI-VER × Optiver</span>
-                <span className="event-time">
-                  <Clock size={16} />
-                  28–29 March 2026
-                </span>
-                <span className="event-location">
-                  <MapPin size={16} />
-                  IIT Kanpur
-                </span>
-              </div>
-              <div className="event-status">
-                <span className="status-badge upcoming">Upcoming</span>
               </div>
             </div>
-          </div>
-
-
+          ))}
         </motion.section>
       </div>
     </div>
   );
 };
 
-export default Events; 
+export default Events;
