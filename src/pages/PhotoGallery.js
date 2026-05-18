@@ -20,6 +20,26 @@ const albums = [
         ]
     },
     {
+        id: 'auctiver-event',
+        title: "Auctiver: SciMathSoc X Optiver",
+        cover: "/Auctiver/cover.jpeg",
+        images: [
+            { id: 1, src: "/Auctiver/Results_Top_5.jpeg", caption: "Top 5 Winners" },
+            { id: 2, src: "/Auctiver/Results_6_to_10.jpeg", caption: "6th to 10th Position" },
+            //{ id: 3, src: "/Auctiver/IMG-20260323-WA0005.jpeg", caption: "" },
+            { id: 4, src: "/Auctiver/IMG-20260511-WA0069.jpeg", caption: "" },
+            { id: 5, src: "/Auctiver/IMG-20260511-WA0070.jpeg", caption: "" },
+            { id: 6, src: "/Auctiver/IMG-20260511-WA0072.jpeg", caption: "" },
+            { id: 7, src: "/Auctiver/IMG-20260511-WA0075.jpeg", caption: "" },
+            { id: 8, src: "/Auctiver/IMG-20260511-WA0085.jpeg", caption: "" },
+            { id: 9, src: "/Auctiver/IMG-20260511-WA0086.jpeg", caption: "" },
+            { id: 10, src: "/Auctiver/IMG-20260511-WA0088.jpeg", caption: "" },
+            { id: 11, src: "/Auctiver/IMG-20260511-WA0090.jpeg", caption: "With Top 5 Winners" },
+            { id: 12, src: "/Auctiver/IMG-20260511-WA0091.jpeg", caption: "" },
+            { id: 13, src: "/Auctiver/IMG-20260519-WA0005.jpeg", caption: "" }
+        ]
+    },
+    {
         id: 'intro-session',
         title: "Intro Session",
         cover: "/Intro Session/IMG-20260129-WA0009.jpg",
