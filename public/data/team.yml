@@ -112,3 +112,7 @@ current_team:
       photo: "/team/Secy_Utkarsh.jpg"
       email: "utkarshc24@iitk.ac.in"
       role: "Secretary" 
+    - name: "Chaitanya Mahawar"
+      photo: "/team/Secy_Chaitanya_mahawar.png"
+      email: "Cmahawar22@iitk.ac.in"
+      role: "Secretary" 

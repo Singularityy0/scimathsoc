@@ -1,94 +1,172 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, ExternalLink } from 'lucide-react';
 import './Events.css';
 
-const eventsData = [
+const events = [
   {
-    id: 'auctiver',
-    date: { day: '28', month: 'Mar', year: '2026' },
-    sortDate: new Date('2026-03-28'),
+    id: 'auctiver-2026',
+    date: '2026-03-28',
+    day: '28',
+    month: 'Mar',
+    year: '2026',
     title: 'AUCTI-VER',
     description: 'A two-day math auction where teams of three solve problems, bid strategically, and make real-time decisions under market-like conditions. Think fast, bid smart, win big.',
     category: 'AUCTI-VER × Optiver',
     categoryClass: 'competition',
     time: '28–29 March 2026',
     location: 'IIT Kanpur',
-    status: 'Completed',
-    statusClass: 'upcoming',
-    isAuctiver: true
+    status: 'completed',
+    cardClass: 'auctiver-card',
+    details: (
+      <div className="auctiver-details">
+        <div className="auctiver-sponsor">
+          <p>
+            Powered by <strong>Optiver</strong> which is  a global market-making firm at the intersection of math, tech, and trading.
+          </p>
+        </div>
+
+        <div className="auctiver-schedule">
+          <h4>Schedule</h4>
+          <div className="schedule-items">
+            <div className="schedule-item">
+              <span className="schedule-label">Qualifiers</span>
+              <span className="schedule-date">28 March 2026</span>
+            </div>
+            <div className="schedule-item">
+              <span className="schedule-label">Finals</span>
+              <span className="schedule-date">29 March 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="auctiver-format">
+          <h4>Format</h4>
+          <p>
+            <strong>Teams of 3</strong> compete across multiple auction rounds testing math, strategy, and speed.
+          </p>
+          <p>
+            Open to all batches.There are limited seats for <strong>Y25 students</strong>; screening test will be conducted on <strong>17–18 March</strong>.
+          </p>
+          <p>
+            Top <strong>10 Y25 volunteers</strong> from Pi-Day get a <strong>direct qualifier spot</strong>.
+          </p>
+        </div>
+
+        <div className="auctiver-prizes">
+          <h4>Prizes & Goodies</h4>
+          <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
+          <ul>
+            <li>Finalists get <strong>Optiver goodie bags</strong></li>
+            <li><strong>Top 5</strong> get <strong>headphones worth ₹20K+</strong></li>
+            <li>Winners' profiles forwarded to <strong>Optiver</strong></li>
+          </ul>
+        </div>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeBa8d4tVbstSAkqO2Dz4vDTQHkfYjhbcH0W6jdZ77TbVv08Q/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary auctiver-register-btn"
+        >
+          Register Now
+          <ExternalLink size={18} />
+        </a>
+        <p className="auctiver-note">
+          <em>Note:</em> Team registration details will be shared shortly.
+        </p>
+      </div>
+    ),
   },
   {
-    id: 'quantum',
-    date: { day: '3', month: 'Nov', year: '2025' },
-    sortDate: new Date('2025-11-03'),
+    id: 'qc-2025-11-03',
+    date: '2025-11-03',
+    day: '3',
+    month: 'Nov',
+    year: '2025',
     title: 'Completed',
-    description: <>Ever wondered why quantum computing exists, what it really is, or how it actually works? Join us for an interactive discussion session on "Introduction to Quantum Computing" where we'll explore the why, what, and how of this fascinating field!<br /><br />This isn't your typical lecture -- it's a casual, meme-filled discussion! So come with your thoughts, doubts, and most importantly, an open mind. Oh, and here's a little bonus -- you'll get a sneak peek (and preference!) into something SciMathSoc is planning for the winter, brownie points for guesses!<br /><br />Let's entangle our minds and untangle some qubits together!</>,
+    description: (
+      <>
+        Ever wondered why quantum computing exists, what it really is, or how it actually works? Join us for an interactive discussion session on "Introduction to Quantum Computing" where we'll explore the why, what, and how of this fascinating field!<br /><br />
+        This isn't your typical lecture -- it's a casual, meme-filled discussion! So come with your thoughts, doubts, and most importantly, an open mind. Oh, and here's a little bonus -- you'll get a sneak peek (and preference!) into something SciMathSoc is planning for the winter, brownie points for guesses!<br /><br />
+        Let's entangle our minds and untangle some qubits together!
+      </>
+    ),
     category: 'Introduction to Quantum Computing',
     categoryClass: 'seminar',
     time: '7:00 PM',
     location: 'L17',
-    status: 'Completed',
-    statusClass: 'completed'
+    status: 'completed',
   },
   {
-    id: 'kyu-padhe-bhai',
-    date: { day: '10', month: 'Sept', year: '2025' },
-    sortDate: new Date('2025-09-10'),
+    id: 'kpb-2025-09-10',
+    date: '2025-09-10',
+    day: '10',
+    month: 'Sept',
+    year: '2025',
     title: 'Completed',
-    description: <><strong>Session 1: Calculus: from messy origins to rigor</strong><br /><em>Prof. Amit Kuber (Math Dept., IITK)</em><br /><br />Discover the fascinating journey from calculus's messy beginnings to mathematical rigor. We'll explore how early puzzling problems led to calculus's invention and why epsilon-delta "pedantry" is actually the foundation of mathematical precision.<br /><br />Join us for a relaxed, interactive session where you can ask questions you couldn't in class and see how mathematical rigor transforms "obvious" concepts into powerful tools. Come explore the stories behind the subject and maybe find a new perspective on math!</>,
+    description: (
+      <>
+        <strong>Session 1: Calculus: from messy origins to rigor</strong><br />
+        <em>Prof. Amit Kuber (Math Dept., IITK)</em><br /><br />
+        Discover the fascinating journey from calculus's messy beginnings to mathematical rigor. We'll explore how early puzzling problems led to calculus's invention and why epsilon-delta "pedantry" is actually the foundation of mathematical precision.<br /><br />
+        Join us for a relaxed, interactive session where you can ask questions you couldn't in class and see how mathematical rigor transforms "obvious" concepts into powerful tools. Come explore the stories behind the subject and maybe find a new perspective on math!
+      </>
+    ),
     category: 'Kyu Padhe Bhai?',
     categoryClass: 'seminar',
     time: '7:35 PM onwards',
     location: 'L17',
-    status: 'Completed',
-    statusClass: 'completed'
+    status: 'completed',
   },
   {
-    id: 'math-crypto',
-    date: { day: '8', month: 'Sept', year: '2025' },
-    sortDate: new Date('2025-09-08'),
+    id: 'crypto-2025-09-08',
+    date: '2025-09-08',
+    day: '8',
+    month: 'Sept',
+    year: '2025',
     title: 'Completed',
     description: 'Step into the shadows of secrecy where mathematics meets security. Unravel the complex number theory and algorithms that guard our digital lives. From classical ciphers to modern encryption, join us to decipher the elegant math protecting your every click.',
     category: 'Math Behind Cryptography',
     categoryClass: 'seminar',
     time: '6:30 PM - 8:30 PM',
     location: 'Lecture Hall 17',
-    status: 'Completed',
-    statusClass: 'completed'
+    status: 'completed',
   },
   {
-    id: 'escape-room',
-    date: { day: '17', month: 'Aug', year: '2025' },
-    sortDate: new Date('2025-08-17'),
+    id: 'escape-room-2025-08-17',
+    date: '2025-08-17',
+    day: '17',
+    month: 'Aug',
+    year: '2025',
     title: 'Completed',
     description: 'The Chamber of Challenges is designed as a science and maths escape room, a race against time where teams must solve interconnected puzzles, unlock hidden clues, and outwit the hourglass before it seals shut.',
     category: 'Escape Room',
     categoryClass: 'competition',
     time: '3:00 PM onwards',
     location: 'MPR',
-    status: 'Completed',
-    statusClass: 'completed'
+    status: 'completed',
   },
   {
-    id: 'intro-session',
-    date: { day: '5', month: 'Aug', year: '2025' },
-    sortDate: new Date('2025-08-05'),
+    id: 'intro-2025-08-05',
+    date: '2025-08-05',
+    day: '5',
+    month: 'Aug',
+    year: '2025',
     title: 'Completed',
-    description: 'SciMathSoc’s Intro Session at IIT Kanpur welcomes new students, showcasing the society’s activities, workshops, and competitions to spark interest in science and mathematics.',
+    description: "SciMathSoc's Intro Session at IIT Kanpur welcomes new students, showcasing the society's activities, workshops, and competitions to spark interest in science and mathematics.",
     category: 'Scimathsoc Intro session',
     categoryClass: 'Intro',
     time: '7:00 PM - 9:00 PM',
     location: 'L7, Lecture Hall Complex, IIT Kanpur',
-    status: 'Completed',
-    statusClass: 'completed'
-  }
+    status: 'completed',
+  },
 ];
 
 const Events = () => {
-  const sortedEvents = useMemo(() => {
-    return [...eventsData].sort((a, b) => b.sortDate - a.sortDate);
-  }, []);
+  const sortedEvents = [...events].sort(
+    (eventA, eventB) => new Date(eventB.date) - new Date(eventA.date)
+  );
 
   return (
     <div className="events-page">
@@ -112,76 +190,20 @@ const Events = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {sortedEvents.map((event) => (
-            <div key={event.id} className={`event-card ${event.isAuctiver ? 'auctiver-card' : ''}`}>
+            <div
+              key={event.id}
+              className={`event-card${event.cardClass ? ` ${event.cardClass}` : ''}`}
+            >
               <div className="event-date">
-                <span className="day">{event.date.day}</span>
-                <span className="month">{event.date.month}</span>
-                <span className="year">{event.date.year}</span>
+                <span className="day">{event.day}</span>
+                <span className="month">{event.month}</span>
+                <span className="year">{event.year}</span>
               </div>
-              
               <div className="event-content">
                 <h3>{event.title}</h3>
                 <p className="event-description">{event.description}</p>
-                
-                {event.isAuctiver && (
-                  <div className="auctiver-details">
-                    <div className="auctiver-sponsor">
-                      <p>
-                        Powered by <strong>Optiver</strong> which is a global market-making firm at the intersection of math, tech, and trading.
-                      </p>
-                    </div>
 
-                    <div className="auctiver-schedule">
-                      <h4>Schedule</h4>
-                      <div className="schedule-items">
-                        <div className="schedule-item">
-                          <span className="schedule-label">Qualifiers</span>
-                          <span className="schedule-date">28 March 2026</span>
-                        </div>
-                        <div className="schedule-item">
-                          <span className="schedule-label">Finals</span>
-                          <span className="schedule-date">29 March 2026</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="auctiver-format">
-                      <h4>Format</h4>
-                      <p>
-                        <strong>Teams of 3</strong> compete across multiple auction rounds testing math, strategy, and speed.
-                      </p>
-                      <p>
-                        Open to all batches.There are limited seats for <strong>Y25 students</strong>; screening test will be conducted on <strong>17–18 March</strong>.
-                      </p>
-                      <p>
-                        Top <strong>10 Y25 volunteers</strong> from Pi-Day get a <strong>direct qualifier spot</strong>.
-                      </p>
-                    </div>
-
-                    <div className="auctiver-prizes">
-                      <h4>Prizes & Goodies</h4>
-                      <p className="prize-pool">Total Prize Pool: <strong>₹2,00,000</strong></p>
-                      <ul>
-                        <li>Finalists get <strong>Optiver goodie bags</strong></li>
-                        <li><strong>Top 5</strong> get <strong>headphones worth ₹20K+</strong></li>
-                        <li>Winners' profiles forwarded to <strong>Optiver</strong></li>
-                      </ul>
-                    </div>
-
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSeBa8d4tVbstSAkqO2Dz4vDTQHkfYjhbcH0W6jdZ77TbVv08Q/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary auctiver-register-btn"
-                    >
-                      Register Now
-                      <ExternalLink size={18} />
-                    </a>
-                    <p className="auctiver-note">
-                      <em>Note:</em> Team registration details will be shared shortly.
-                    </p>
-                  </div>
-                )}
+                {event.details}
 
                 <div className="event-meta">
                   <span className={`event-category ${event.categoryClass}`}>{event.category}</span>
@@ -194,9 +216,8 @@ const Events = () => {
                     {event.location}
                   </span>
                 </div>
-                
                 <div className="event-status">
-                  <span className={`status-badge ${event.statusClass}`}>{event.status}</span>
+                  <span className={`status-badge ${event.status}`}>{event.status === 'upcoming' ? 'Upcoming' : 'Completed'}</span>
                 </div>
               </div>
             </div>
