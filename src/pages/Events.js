@@ -16,7 +16,7 @@ const events = [
     categoryClass: 'competition',
     time: '28–29 March 2026',
     location: 'IIT Kanpur',
-    status: 'upcoming',
+    status: 'completed',
     cardClass: 'auctiver-card',
     details: (
       <div className="auctiver-details">
