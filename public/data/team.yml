@@ -80,3 +80,27 @@ current_team:
       photo: "/team/Shiksha.jpeg"
       email: "pragnad24@iitk.ac.in"
       role: "Secretary"
+
+  founding_leaders:
+    - name: "Shrey_Solanki"
+      photo: "/team/Founding Leaders/Shrey_Solanki.jpg"
+      email: "z"
+      role: "Founding Leader"
+    - name: "Shravan_Agrawal"
+      photo: "/team/Founding Leaders/Shravan_Agrawal.jpg"
+      email: "z"
+      role: "Founding Leader"
+    - name: "Shaurya_Johari"
+      photo: "/team/Founding Leaders/Shaurya_Johari.jpg"
+      email: "z"
+      role: "Founding Leader"
+    - name: "Devansh_Bharadwaj"
+      photo: "/team/Founding Leaders/Devansh_Bharadwaj.jpeg"
+      email: "z"
+      role: "Founding Leader"
+
+  veterans:
+    - name: "Chaitanya Mahawar"
+      photo: "/team/Senior Advisors/Chaitanya Mahawar.jpeg"
+      email: "email@iitk.ac.in"
+      role: "Veteran"
