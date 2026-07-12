@@ -37,7 +37,9 @@ const Team = () => {
           const data = {
             current_year: 2024,
             current_team: {
+              founding_leaders: [],
               coordinators: [],
+              senior_advisors: [],
               secretaries: []
             }
           };
@@ -56,8 +58,8 @@ const Team = () => {
               data.current_year = parseInt(trimmedLine.split(':')[1].trim());
             } else if (trimmedLine === 'current_team:') {
               currentSection = 'current_team';
-              data.current_team = { coordinators: [], secretaries: [] };
-            } else if (indentLevel === 2 && (trimmedLine === 'coordinators:' || trimmedLine === 'secretaries:')) {
+              data.current_team = { founding_leaders: [], coordinators: [], senior_advisors: [], secretaries: [] };
+            } else if (indentLevel === 2 && (trimmedLine === 'founding_leaders:' || trimmedLine === 'coordinators:' ||  trimmedLine === 'senior_advisors:' || trimmedLine === 'secretaries:')) {
               currentRole = trimmedLine.replace(':', '');
             } else if (indentLevel === 4 && trimmedLine.startsWith('- name:')) {
               currentMember = {};
@@ -108,11 +110,13 @@ const Team = () => {
 
   const getCurrentTeam = () => {
     if (!teamData || !teamData.current_team) {
-      return { coordinators: [], secretaries: [] };
+      return { founding_leaders: [], coordinators: [], secretaries: [], senior_advisors: [] };
     }
     return {
+      founding_leaders: teamData.current_team.founding_leaders || [],
       coordinators: teamData.current_team.coordinators || [],
-      secretaries: teamData.current_team.secretaries || []
+      senior_advisors: teamData.current_team.senior_advisors || [],
+      secretaries: teamData.current_team.secretaries || [],
     };
   };
 
@@ -136,9 +140,47 @@ const Team = () => {
         
         <motion.div className="team-content" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="team-section">
+            <div className="section-header"><Users size={24} /><h2>Founding Leaders ({currentTeam.founding_leaders.length})</h2></div>
+            <div className="team-grid">
+              {currentTeam.founding_leaders.map((member, index) => (
+                <motion.div key={member.name} className="team-member" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.1 }}>
+                  <div className="member-photo">
+                    <img src={member.photo} alt={member.name} onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder"><Users size={32} /></div>
+                  </div>
+                  <div className="member-info">
+                    <h3>{member.name}</h3>
+                    <p className="member-role">{member.role}</p>
+                    <button className="email-btn" onClick={() => handleEmailClick(member.email)} title={`Email ${member.name}`}><Mail size={16} />{member.email}</button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="team-section">
             <div className="section-header"><Users size={24} /><h2>Leaders ({currentTeam.coordinators.length})</h2></div>
             <div className="team-grid">
               {currentTeam.coordinators.map((member, index) => (
+                <motion.div key={member.name} className="team-member" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.1 }}>
+                  <div className="member-photo">
+                    <img src={member.photo} alt={member.name} onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="photo-placeholder"><Users size={32} /></div>
+                  </div>
+                  <div className="member-info">
+                    <h3>{member.name}</h3>
+                    <p className="member-role">{member.role}</p>
+                    <button className="email-btn" onClick={() => handleEmailClick(member.email)} title={`Email ${member.name}`}><Mail size={16} />{member.email}</button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="team-section">
+            <div className="section-header"><Users size={24} /><h2>Senior Advisors ({currentTeam.senior_advisors.length})</h2></div>
+            <div className="team-grid">
+              {currentTeam.senior_advisors.map((member, index) => (
                 <motion.div key={member.name} className="team-member" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.1 }}>
                   <div className="member-photo">
                     <img src={member.photo} alt={member.name} onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
@@ -193,6 +235,7 @@ const Team = () => {
               })}
             </div>
           </div>
+
         </motion.div>
       </div>
     </div>
