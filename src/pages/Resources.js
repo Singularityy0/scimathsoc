@@ -43,6 +43,7 @@ const Resources = () => {
       resources: [
         {
           name: 'Blue Victoria 50 Combinatorics Problems Set',
+          author: 'Nrip Dave',
           type: 'PDF',
           size: '767 KB',
           file: '/resources/Blue_Victoria_50_Combinatorics_problems_set (final).pdf'
