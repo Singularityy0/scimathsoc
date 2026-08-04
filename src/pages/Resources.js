@@ -13,7 +13,8 @@ const Resources = () => {
       description: 'Comprehensive  notes and handouts for various topics',
       resources: [
         {
-          name: 'Integration and Summation ~ Edward Jin',
+          name: 'Integration and Summation',
+          author: 'Edward Jin',
           type: 'PDF',
           size: '229 KB',
           file: '/resources/Integration_and_Summation.pdf'
