@@ -13,10 +13,11 @@ const Resources = () => {
       description: 'Comprehensive  notes and handouts for various topics',
       resources: [
         {
-          name: 'Integration and Summation ~ Edward Jin',
+          name: 'Integration and Summation',
+          author: 'Edward Jin',
           type: 'PDF',
           size: '229 KB',
-          file: '/resources/Integration_and_Summation.pdf'
+          file: '/resources/Integration_And_Summation.pdf'
         }
       ]
     },
@@ -43,6 +44,7 @@ const Resources = () => {
       resources: [
         {
           name: 'Blue Victoria 50 Combinatorics Problems Set',
+          author: 'Nrip Dave',
           type: 'PDF',
           size: '767 KB',
           file: '/resources/Blue_Victoria_50_Combinatorics_problems_set (final).pdf'
