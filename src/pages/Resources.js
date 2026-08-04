@@ -17,7 +17,7 @@ const Resources = () => {
           author: 'Edward Jin',
           type: 'PDF',
           size: '229 KB',
-          file: '/resources/Integration_and_Summation.pdf'
+          file: '/resources/Integration_And_Summation.pdf'
         }
       ]
     },
